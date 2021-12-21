@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Resume Generator</title>
+
+</head>
+
+<body>
+    <div class="resumeInputContainer">
+        <form class="row resumeForm">
+            <h1>Resume Generator</h1>
+            <div class="text-center">
+                <input type="text" class="text-center" name="fName" placeholder="Enter your Full Name"
+                    >
+            </div>
+            <input class="col-md-6 my-2" type="tel" name="contactNumber" placeholder="Contact number: (+91) xxxxxxxxxx"
+                >
+            <input class="col-md-6 my-2" type="emails" name="email" placeholder="email: xxxx@xxx.com"
+                >
+            <div class="my-2 ">
+                <label><strong>Objective:</strong></label>
+                <textarea class="form-control" name="objective" rows="3" placeholder="Enter your Objective"></textarea>
+            </div>
+            <div class="my-2">
+                <label><strong> Education Details:</strong></label>
+                <textarea name="education" class="form-control" rows="3"></textarea>
+            </div>
+            <div class="my-2 ">
+                <label><strong>Projects:</strong></label>
+                <textarea class="form-control" name="project" rows="3"
+                    placeholder="Enter your project Description"></textarea>
+            </div>
+            <div class="my-2">
+                <label><strong>Skills:</strong></label>
+                <textarea rows="3" name="skill" class="form-control" placeholder="Enter your skills"></textarea>
+            </div>
+            <div class="my-2">
+                <label><strong>Fields of Interest:</strong></label>
+                <textarea rows="3" name="foi" class="form-control"
+                    placeholder="Enter your Fields of Interests"></textarea>
+            </div>
+            <div class="my-2" id="strengthContainer">
+                <label><strong>Strengths:</strong></label>
+                <textarea rows="3" name="strength" class="form-control"
+                    placeholder="Enter your Strengths"></textarea>
+            </div>
+
+            <input class="col-md-6 my-2" type="url" name="linkedin" placeholder="Enter your LinkedIn profile link">
+            <input class="col-md-6 my-2" type="url" name="github" placeholder="Enter your Github profile link">
+            <input type="text" name="salute" id="" placeholder="Enter your Name">
+        </form>
+        <div class="resumeGenerateBtn text-center">
+            <button class="btn btn-lg btn-dark" onclick="addDetails()">Generate</button>
+        </div>
+    </div>
+
+
+    <!--------------------------------------- R E S U M E  T E M P L A T E --------------------------------------->
+
+    <div class="resume">
+        <section id="heading">
+            <div class="header">
+                <h1 class="title"><strong>Brijeshkumar H. Dholakiya</strong></h1>
+            </div>
+            <div class="info">
+                <p class="contactPara"> (+91) 1234567890 ||</p>
+                <p><a href="#">abc@def.com</a></p>
+            </div>
+        </section>
+
+        <section id="objective">
+            <div class="objective-para">
+                <h3 class="objTitleTemp">Objective:-</h3>
+                <p id="objDescTemp">&nbsp A self-motivated IT professional with huge knowledge and proficiency in
+                    JavaScript, HTML , CSS, and mobile responsive web development, as well as strong skills and ability
+                    in writing clean and efficient code, seeks the position of Front-End Web Developer with XXX Tech.
+                </p>
+            </div>
+        </section>
+
+        <section id="education">
+            <div class="divider">
+                <h2>Education</h2>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Graduation in xxxx branch from xxxx college/university in the year 1234 with x CGPA/xy%</li>
+                    <li>Graduation in xxxx branch from xxxx college/university in the year 1234 with x CGPA/xy%</li>
+                    <li>Graduation in xxxx branch from xxxx college/university in the year 1234 with x CGPA/xy%</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="project">
+            <div class="divider">
+                <h2>Projects</h2>
+            </div>
+            <div class="content">
+                <ol>
+                    <li>
+                        <h6><strong> Lorem ipsum dolor sit.</strong></h6>
+                        <ul>
+                            <li>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit vero et placeat. A vel est, cupiditate laboriosam expedita adipisci aspernatur!<br><a
+                                    href="#">https://github.io/todoList</a>
+                                </a>   
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h6><strong> Lorem ipsum dolor sit amet.</strong></h6>
+                        <ul>
+                            <li>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum aspernatur alias odit ex inventore voluptatem distinctio esse deserunt sed perspiciatis!<br>
+                                    <a href="#">https://github.io/todoList</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+        </section>
+    
+        <section id="skill">
+            <div class="divider">
+                <h2>Skills</h2>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>
+                        <p><strong> Web Development Languages:</strong> HTML, CSS, Javascript, Node.js </p>
+                    </li>
+                    <li>
+                        <p><strong> Libraries and Frameworks:</strong> Bootstrap, jQuery, express.js, React.js, ejs, REST
+                            API</p>
+                    </li>
+                    <li>
+                        <p><strong>Databases:</strong> MySQL, MongoDB</p>
+                    </li>
+                    <li>
+                        <p><strong> Tools and Technologies:</strong> Git, Github, VS Code, Postmen, Sandbox, Robo3T, Heroku,
+                            Hyper</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    
+        <section id="foi">
+            <div class="divider">
+                <h2>Fields of Interest</h2>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="strength">
+            <div class="divider">
+                <h2>Strengths</h2>
+            </div>
+            <div class="content">
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+            </div>
+        </section>
+        <footer>
+            <div class="footer">
+                <span>I hereby aknowledge that the information furnished above is correct to the best of my
+                    knowledge.</span>
+                <p class="github"><em>-Lorem, ipsum.</em></p>
+            </div>
+        </footer>
+    </div>
+    <button id="printBtn" onclick="printResume()">Print</button>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/27.1.0/classic/ckeditor.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
